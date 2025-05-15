@@ -1,0 +1,38 @@
+* CMOS One-Stage Op-Amp Template
+
+* Power supplies
+V3 VSS 0 DC -2.5
+V4 VDD 0 DC 2.5
+
+* Input sources
+V1 in+ 0 AC 1
+V2 in- 0 AC 0
+
+* Bias current source (to be optimized)
+I1 VDD N002 DC $I1$
+
+* Transistors
+M1 N001 N002 VSS VSS NMOS W=$W_M1$ L=0.18u
+M2 out+ in+ N001 VSS NMOS W=$W_M2$ L=0.18u
+M3 out- in- N001 VSS NMOS W=$W_M3$ L=0.18u
+M4 N002 N002 VSS VSS NMOS W=$W_M4$ L=0.18u
+M5 VDD out+ out+ VDD PMOS W=$W_M5$ L=0.18u
+M6 VDD out+ out- VDD PMOS W=$W_M6$ L=0.18u
+
+* Capacitors
+C1 out- 0 $C1$
+C2 out+ 0 $C2$
+
+* Models
+.model NMOS NMOS
+.model PMOS PMOS
+.lib standard.mos
+
+* AC Analysis
+.ac dec 100 1 100Meg
+
+* Measurements
+.meas ac gain_max max db(v(out-))
+.meas ac power_avg avg I(V4)
+
+.end

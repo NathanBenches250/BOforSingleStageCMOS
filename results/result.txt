@@ -1,0 +1,68 @@
+Optimization complete!
+Best parameters: {'W_M1': np.float64(4.691470606818372), 'W_M2': np.float64(4.784081862209552), 'W_M3': np.float64(1.562998714831457), 'W_M4': np.float64(2.2959731040040454), 'W_M5': np.float64(2.154527826435893), 'W_M6': np.float64(2.050285706971544), 'I1': np.float64(3.8961187997544454e-05), 'C1': np.float64(5.071010054599345e-12), 'C2': np.float64(3.3643678486388005e-12)}
+Best score: -32.8988
+
+ Best Design Found:
+W_M1           4.691471e+00
+W_M2           4.784082e+00
+W_M3           1.562999e+00
+W_M4           2.295973e+00
+W_M5           2.154528e+00
+W_M6           2.050286e+00
+I1             3.896119e-05
+C1             5.071010e-12
+C2             3.364368e-12
+gain_db        3.289890e+01
+power_watts    4.171160e-04
+score         -3.289882e+01
+Name: 90, dtype: float64
+
+ Comparison with Random Sampling:
+  Best Random Score: -34.7783
+  Best Custom BO Score: -32.8988
+  Improvement: -1.8794 (-5.40%)
+
+Comparison of BO Approaches
+Original BO Best Score: -33.6385
+Custom BO Best Score:   -32.8988
+Improvement:            -0.7397 (2.20%)
+
+Best Parameter Configurations
+
+Original BO:
+  W_M1: 5.0
+  W_M2: 3.597967267263026
+  W_M3: 1.0
+  W_M4: 3.794897469866352
+  W_M5: 6.008583816490647
+  W_M6: 2.0
+  I1: 8.794861205122768e-05
+  C1: 8.033877097515961e-12
+  C2: 2.3185769150380145e-12
+
+Custom BO:
+  W_M1: 4.691470606818372
+  W_M2: 4.784081862209552
+  W_M3: 1.562998714831457
+  W_M4: 2.2959731040040454
+  W_M5: 2.154527826435893
+  W_M6: 2.050285706971544
+  I1: 3.896118799754445e-05
+  C1: 5.0710100545993446e-12
+  C2: 3.3643678486388005e-12
+
+Parameter differences:
+
+Parameter differences:
+  W_M1: 3.0853e-01 (6.37%)
+Parameter differences:
+  W_M1: 3.0853e-01 (6.37%)
+  W_M1: 3.0853e-01 (6.37%)
+  W_M2: 1.1861e+00 (28.30%)
+  W_M3: 5.6300e-01 (43.93%)
+  W_M4: 1.4989e+00 (49.22%)
+  W_M5: 3.8541e+00 (94.43%)
+  W_M6: 5.0286e-02 (2.48%)
+  I1: 4.8987e-05 (77.20%)
+  C1: 2.9629e-12 (45.22%)
+  C2: 1.0458e-12 (36.80%)
